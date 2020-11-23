@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Congratulations!</title>
+        <script>
+            let i = 0;
+            let txt = 'CONGRATULATIONS!';
+            let speed = 500;
+            function typeWriter()
+            {
+                if (i < txt.length)
+                {
+                    document.querySelector('h1').innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            function printname()
+            {
+                let nam = sessionStorage.getItem("userName");
+                console.log(nam);
+                alert("Congratulations " + nam + "! You have won the game.");
+
+            }
+            let j = 0;
+            function treasure()
+            {
+                let toggleimage=["/t_close.JPG","/t_open.JPG"];
+                let im = document.querySelector('#img').src;
+                if (j === 1)
+                {
+                    document.querySelector('#img').src = toggleimage[1];
+                    j = 0;
+                }
+                else
+                {
+                    document.querySelector('#img').src = toggleimage[0];
+                    j++;
+                }
+            }
+             window.setInterval(treasure,500);
+        </script>
+
+    </head>
+    <body class = "bg-dark">
+        <script>
+             printname();
+        </script>
+        <h1 class = "cent2 text-danger" id = "topic"></h1>
+        <script>
+            typeWriter();
+        </script>
+
+        <div class = "container">
+         <p class="text-warning bg-dark text-monospace fsize cent3"><a class = "font-weight-bold"><em>Here's your treasure!</em></p>
+
+        <figure class= "figure cent3" id = "p1">
+            <img class="figure-img img3 rounded"  id = "img" src="/t_open.JPG" alt="Treasure check the link below">
+            <figcaption class="figure-caption">img-src: <a href = "https://blog.storyblocks.com/creators/subscriber-profile-infinite-monkeys-games-and-animations/">https://blog.storyblocks.com/creators/subscriber-profile-infinite-monkeys-games-and-animations/</a></figcaption>
+        </figure>
+        <div>
+            <p class = "cent2"><i><a href = "index.html">Click Here to Play Again</a></i></p>
+        </div>
+        </div>
+        <footer> <p class = "cent2"><a href = "https://www.mathsisfun.com/puzzles/number-puzzles-index.html">Sources for questions</a></p> </footer>
+    </body>
+</html>

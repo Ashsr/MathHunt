@@ -1,0 +1,113 @@
+.cent
+{
+    max-width: 350px;
+    margin: auto;
+
+}
+
+.button-center
+{
+  margin: auto;
+  position: absolute;
+  top: 90%;
+  left: 55%;
+  max-width: 100%;
+  height: auto;
+}
+
+#name
+{
+    left: 42%;
+}
+
+.img-fluid
+{
+    width: 400px;
+    height: 300px;
+}
+
+.figure-caption
+{
+    position: relative;
+    font-size: 8px;
+    width: 200px;
+    overflow-wrap: break-word;
+    right: 150%;
+}
+
+.figure-caption1
+{
+    font-size: 8px;
+    width: 200px;
+    overflow-wrap: break-word;
+}
+
+#p1
+{
+  display: block;
+  margin: auto;
+   max-width: 15%;
+   max-height: 25%;
+   bottom: 50%;
+}
+
+
+.fsize
+{
+    font-size: 25px;
+}
+
+.img2
+{
+    width: 400px;
+    height: 200px;
+}
+
+#ans
+{
+    left: 42%;
+}
+
+.button-center2
+{
+  margin: auto;
+  position: absolute;
+  top: 70%;
+  left: 55%;
+  max-width: 100%;
+  height: auto;
+}
+
+.cent2
+{
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    display: block;
+
+}
+
+.img3
+{
+    position: relative;
+    width: 200px;
+    height: 300px;
+    right: 150%;
+}
+
+
+.container
+{
+    max-width: 350px;
+    margin: auto;
+    display: block;
+    top: 70%;
+
+}
+
+.img4
+{
+
+    width: 200px;
+    height: 300px;
+}

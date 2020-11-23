@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Math Fun</title>
+
+    </head>
+    <body class = "bg-dark">
+        <h1 class = "cent text-danger" id = "topic">The MATH HUNT<b>|</b></h1>
+        <script>
+             function blink()
+            {
+                let b = document.querySelector('b');
+                if (b.style.visibility === 'hidden')
+                {
+                    b.style.visibility = 'visible';
+                }
+                else
+                {
+                    b.style.visibility = 'hidden';
+                }
+            }
+            window.setInterval(blink,500);
+
+            function next()
+            {
+                sessionStorage.setItem("userName",document.querySelector('#name').value);
+                window.location.href = "level1.html";
+            }
+        </script>
+
+        <div>
+        <p class="text-warning bg-dark text-monospace fsize"><a class = "font-weight-bold">Welcome!</a> The rules are simple here. In each level there is a math puzzle to solve. Once you clear it the next level will be unlocked and revealed. There are a total of 2 levels. Solve them to reach to the final treasure! Best of luck! Enter your name below and press begin.</p>
+
+        </div>
+        <div>
+            <form onsubmit = "next(); return false;" class = "cent">
+                <input type = "text" id = "name" class = "button-center">
+                <input type = "submit" value = "Begin" class = "button-center">
+            </form>
+        </div>
+        <figure class= "figure cent" id = "p1">
+            <img class="figure-img img-fluid rounded" src="/puzzle1.jpg" alt="Puzzle picture check the link below">
+            <figcaption class="figure-caption1 text-secondary">img-src: <a href = "https://www.npr.org/2010/12/08/131909788/solving-puzzles-satisfies-the-nimble-brain">https://www.npr.org/2010/12/08/131909788/solving-puzzles-satisfies-the-nimble-brain</a></figcaption>
+        </figure>
+    </body>
+</html>

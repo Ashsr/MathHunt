@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Level 1</title>
+        <script>
+
+            let ans = 6210001000;
+            function check()
+            {
+                if (Number(document.querySelector('#ans').value) === ans)
+                {
+                    alert("Congratulations. You solved it!");
+                    window.location.href = "level2.html";
+                }
+                else
+                {
+                    alert("Please check your answer and try again.");
+                }
+                document.querySelector('#ans').value = '';
+            }
+            let i = 0;
+            let txt = 'LEVEL 1';
+            let speed = 500;
+            function typeWriter()
+            {
+                if (i < txt.length)
+                {
+                    document.querySelector('h1').innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+            }
+
+            function printname()
+            {
+                let nam = sessionStorage.getItem("userName");
+                console.log(nam);
+                document.querySelector('a').innerHTML += nam;
+                document.querySelector('a').innerHTML += '!';
+
+            }
+        </script>
+
+    </head>
+    <body class = "bg-dark">
+        <h1 class = "cent2 text-danger" id = "topic"></h1>
+        <script>
+            typeWriter();
+        </script>
+
+        <div>
+         <p class="text-warning bg-dark text-monospace fsize"><a class = "font-weight-bold">Welcome to level 1 </a> <script> printname();</script> Find a 10-digit number where the first digit is how many zeros in the number, the second digit is how many 1s in the number etc. until the tenth digit which is how many 9s in the number.</p>
+        </div>
+        <div>
+            <form onsubmit = "check(); return false;" class = "cent">
+                <input type = "text" id = "ans" class = "button-center2">
+                <input type = "submit" value = "Check" class = "button-center2">
+            </form>
+        </div>
+        <figure class= "figure cent" id = "p1">
+            <img class="figure-img img2 rounded" src="/numbers.jpg" alt="Abstract Numbers check the link below">
+            <figcaption class="figure-caption1 text-secondary">img-src: <a href = "123DARTIST/SHUTTERSTOCK">123DARTIST/SHUTTERSTOCK</a></figcaption>
+        </figure>
+    </body>
+</html>
